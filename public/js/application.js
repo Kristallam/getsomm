@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('#color').val("");
   $('select').material_select();
-  $("varietal-container").hide();
+  $("#varietal-container").hide();
   $('select').material_select();
   $('#color').on('change', function(event) {
 
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     $("#varietals").empty();
     $("#varietals").append("<option value='' disabled selected>Choose your varietal</option>");
-    $("varietal-container").show();
+    $("#varietal-container").show();
     for (var i=0; i < wineVarietal.length; i++) {
       $('#varietals').append("<option value='" + wineVarietal[i] + "'> " + wineVarietal[i].charAt(0).toUpperCase() + wineVarietal[i].slice(1) + "</option>")
     }
