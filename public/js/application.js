@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('#color').val("");
   $('select').material_select();
   $("#hide").hide();
   $('select').material_select();

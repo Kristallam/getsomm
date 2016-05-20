@@ -1,17 +1,17 @@
-<% @recipes.each do |recipe| %>
-  <div class="row">
-    <div class="col s12 m7">
-      <div class="card">
+<div class="row">
+  <% @recipes.each do |recipe| %>
+    <div class="col m4 offset-m1">
+      <div class="card small">
         <div class="card-image">
-          <img src="<%=recipe["image"]%>">
+          <img height="250" width="50" src="<%=recipe["image"]%>">
           <span class="card-title"></span>
         </div>
         <div class="card-content">
         </div>
         <div class="card-action">
-          <a href="#"><%=recipe["name"]%></a>
+          <a href="<%= recipe["link"] %>"><%=recipe["name"]%></a>
         </div>
       </div>
     </div>
-  </div>
   <% end %>
+</div>
