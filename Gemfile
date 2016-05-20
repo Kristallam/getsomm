@@ -15,6 +15,7 @@ gem 'rake'
 gem 'shotgun'
 gem 'rest-client'
 gem 'rspotify'
+gem 'dotenv'
 
 group :test do
   gem 'shoulda-matchers'

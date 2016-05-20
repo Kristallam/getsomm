@@ -28,6 +28,7 @@ GEM
     diff-lcs (1.2.5)
     domain_name (0.5.20160310)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.1.1)
     factory_girl (4.7.0)
       activesupport (>= 3.0.0)
     faker (1.6.3)
@@ -120,6 +121,7 @@ DEPENDENCIES
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
   capybara
+  dotenv
   factory_girl
   faker
   pg
