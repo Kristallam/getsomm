@@ -33,7 +33,7 @@ post '/wines' do
   search_query2 = search_query2.gsub(/\s/, '&20')
 
 
-  response = RestClient.get 'http://api.snooth.com/wines/?akey=<API KEY>&ip=66.28.234.115&q=' + search_query1 + '&n=2' + search_query2
+  response = RestClient.get 'http://api.snooth.com/wines/?akey=z73ermysaslgu6c3wad92bvw7ywq3u0nphjm7a5s0gdg74k9&ip=172.16.50.188&q=' + search_query1 + '&n=2' + search_query2
 
   parsed_data = JSON.parse(response)
   # puts parsed_data
@@ -48,7 +48,7 @@ post '/wines' do
 
   @recipes = []
   wine_codes.each do |code|
-      response = RestClient.get 'http://api.snooth.com/wine/?akey=<API KEYg>&ip=66.28.234.115&food=1&id=' + code
+      response = RestClient.get 'http://api.snooth.com/wine/?akey=z73ermysaslgu6c3wad92bvw7ywq3u0nphjm7a5s0gdg74k9&ip=172.16.50.188&food=1&id=' + code
       parsed_data = JSON.parse(response)
       hashed_data = parsed_data["wines"][0]["recipes"]
       hashed_data.each do |recipe_hash|
