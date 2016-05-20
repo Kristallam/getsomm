@@ -3,6 +3,8 @@ $(document).ready(function() {
   $('select').material_select();
   $("#varietal-container").hide();
   $('select').material_select();
+
+  // User selects red, white, or sparkling
   $('#color').on('change', function(event) {
 
     var that = $(this);
@@ -22,10 +24,10 @@ $(document).ready(function() {
     $('select').material_select();
   });
 
+  // User hits Let's Pair button
   $('#search-form').on("submit", function(event){
     event.preventDefault();
 
-    var dataType = 'json';
     var that = $(this);
     var url = that.attr('action');
     var method = that.attr('method');
@@ -36,26 +38,37 @@ $(document).ready(function() {
       url: url,
       method: method,
       data: data
-      // dataType: dataType
     })
     .done(function(response){
       console.log("WHAT UP")
-      // console.log(response[0].name)
       $("#recipes").empty();
-
-        // for (var i = 0; i < response.length; i++) {
-        //   console.log(response)
-        //   var recipe = response[i]
-        //   $('#recipes').append(response)
-        // }
-
       $('#recipes').append(response)
-
     })
     .fail(function() {
       alert("FAIL")
     })
+  }) // Let's Pair Button Closer
 
+
+// Add Embedded SoundCloud Player
+  $("#add-playlist-link").on('click', function(event) {
+    event.preventDefault();
+    $(this).hide()
+    $("#mood-buttons").show()
   })
 
-});
+  $("#feeling-classy").on('click', function(event) {
+    event.preventDefault();
+
+    $("#soundcloud-player").html("<iframe width='100%' height='450' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/83577941&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'></iframe>")
+  })
+
+    $("#feeling-wild").on('click', function(event) {
+    event.preventDefault();
+
+    $("#soundcloud-player").html("<iframe width='100%' height='300' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/17247114&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true'></iframe>")
+  })
+
+}); //Document Ready closer
+
+
