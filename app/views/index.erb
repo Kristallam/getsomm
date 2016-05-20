@@ -1,0 +1,29 @@
+<div id="wines-display" class="center container col s6">
+</div>
+
+
+<div class="container">
+<form id="search-form" class="center input-field col s3" method="post" action="/wines">
+  <select id = "color" name='type'>
+    <option value="" disabled selected>Choose your poison</option>
+    <option value='red'>Red</option>
+    <option value='white'>White</option>
+    <option value='sparkling'>Sparkling</option>
+  </select>
+  <div id='hide'>
+  <select id = "varietals" name='varietal'>
+    <option value="" disabled selected>Choose your varietal</option>
+    <option class='removeable' name='type[sparkling]'></option>
+  </select>
+  </div>
+  <input type="submit" class="waves-effect waves-light btn-large" value="Let's pair!">
+</form>
+</div>
+<!-- <br>
+<div class="center">
+  <img src="http://i.giphy.com/l2JHVW01MC93XtDMs.gif">
+</div> -->
+<br>
+<div class = "center" id="recipes">
+
+</div>
